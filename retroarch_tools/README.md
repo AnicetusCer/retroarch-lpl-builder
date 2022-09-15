@@ -1,13 +1,13 @@
-###Bash lpl builder script utility.  
+#Bash lpl builder script utility.  
 Warning: This lpl build tool will simpily overwrite any existing .lpl files for any targeted system, you may want to backup any existing .lpl playlists you currently have. you have been warned on line 1.
   
-##Intro  
+#Intro  
 Hello All  
 I got a little bit peaved off with the retroarch need to build lpls from database references of known good images. The goal is laudible but world is very imperfect and people often have there own bad or simpily unreferenced copies of their games. So I wrote this simple utility to help build lpl lists for retroarch bases only on the file names in a given target directory.  
   
 I'm not the greatest scripter in the world there are probably a hundred efficencies and improvments that could be made, but for now this achives my goals of using only bash.
   
-## Expectations
+# Expectations
 Most people organise there roms into system dedicated directories, these scripts expect you do the same. 
 For example:  
 ./megadrive  
@@ -29,12 +29,12 @@ would become: Rom-118293
 
 If you have badly named files, this is what will get listed in retroarch.
   
-## Getting started  
+# Getting started  
 # Setting Variables  
 
-#The first thing you will need to do is tell the scripts where retroarch locations are:  
+The first thing you will need to do is tell the scripts where retroarch locations are:  
   
-#To start you'll probably only need to set the location of where retroarch installs cores for your system.
+To start you'll probably only need to set the location of where retroarch installs cores for your system.
 Edit the ./var_cores file  
 Set the retroarach cores directory variable:
   CoresDir=/path/to/retroarch/install/cores/directory  
