@@ -3,10 +3,10 @@
 #set -x
 
 ScriptDir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-source "${ScriptDir}/vars_cores"
-source "${ScriptDir}/vars_roms"
-source "${ScriptDir}/vars_playlists"
-source "${ScriptDir}/functions"
+source "${ScriptDir}/vars_cores.sh"
+source "${ScriptDir}/vars_roms.sh"
+source "${ScriptDir}/vars_playlists.sh"
+source "${ScriptDir}/functions.sh"
 RetroMachine="Atari - 5200"
 TargetCore="${core_a5200}"
 TargetCoreName="${core_a5200_name}"
