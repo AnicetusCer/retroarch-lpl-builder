@@ -7,14 +7,14 @@ source "${ScriptDir}/vars_cores"
 source "${ScriptDir}/vars_roms"
 source "${ScriptDir}/vars_playlists"
 source "${ScriptDir}/functions"
-RetroMachine="Sega - Saturn"
-TargetCore="${core_mednafen_saturn}"
-TargetCoreName="${core_mednafen_saturn_name}"
-TargetRomDir="${SegaSaturn}"
+RetroMachine="Sega - Dreamcast"
+TargetCore="${core_flycast}"
+TargetCoreName="${core_flycast_name}"
+TargetRomDir="${SegaDreamcast}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
 lpl_build_header > "${TargetLplFile}"
-generate_segasaturn_image_list_from ${TargetRomDir}
+generate_segadreamcast_image_list_from ${TargetRomDir}
 FCount="$(wc -l $TempRomsList | awk '{print $1}')"
 NCount=1
 printf "Total Entries: $FCount\n"

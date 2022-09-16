@@ -14,6 +14,10 @@ This will work on linux and should work on windows using windows subsytems for l
   
 ## Expectations
 
+This needs to be run on the same system as your retroarch system install and the path inputs must be recognised by the native OS.
+
+You need to be able to read, edit text files and have and understanding how to enter a file path for a linux OS.  
+
 Most people organise their roms into system dedicated directories, these scripts expect that you do the same.
 For example:  
 ./megadrive  
@@ -100,8 +104,39 @@ Done
 
 ```  
   
-## Advanced users
+## Common Troubleshooting
 
+## My rom files are in the directory but some of the files don't get added to the list?
+
+This will certainly be the file extention. Go lookup the find function from the retromachine script in the ./functions file. if the extention type is not in the find command search parameters that will be why. To fix this just add a new paramter to the function eg. I want .7z extention files added to the playlist for gameboy color.  
+
+edit the function stanza "generate_nintendogbc_image_list_from" in the ./functions file.
+From:  
+
+```bash
+
+generate_nintendogbc_image_list_from()
+{
+TargetDir="$1"
+find "${TargetDir}" -type f \( -iname "*.gb" -o -iname "*.gbc" -o -iname "*.zip" \) -print > $TempRomsList
+}
+
+```
+
+To:
+
+```bash
+
+generate_nintendogbc_image_list_from()
+{
+TargetDir="$1"
+find "${TargetDir}" -type f \( -iname "*.gb" -o -iname "*.gbc" -o -iname "*.zip" -o -iname "*.7z" \) -print > $TempRomsList
+}
+
+```
+
+Easy huh.  
+  
 ## But what if you don't have a script for my core? :(  
 
 Chillax, most of the functionality of these scripts is nearly identical, to add a new core you can figure it out from an existing script. Here are the step I took to add a script for gameboy roms  
@@ -173,4 +208,16 @@ generate_nintendogb_image_list_from ${TargetRomDir}
 
 Thats it, by copying an existing script, writing a new find function, and modifying 5 lines, you can now run this script to generate a new .lpl for the gameboy.
 
+## I added a new script for a new core, but no roms show up when i scan
+
+This is probably that you have the RetroMachine variable name or *_core_name variable set to a name not reference by retroarch.  
+Go lookup the core you are building a script for here:  
+<https://github.com/libretro/libretro-super/tree/master/dist/info>  
+And look through the cores info file looking for the database name entries and the core name entries, copy them precisly.
+
+## What if I get too many entries, ie one for a .cue and one for a .bin
+
+You can rectify this by understanfing what the core you selected preferes and removing the exstention you are not interested in from the find function of the retromachine.
+then just re-run the script to generate the play list again.  
+  
 ## Happy lpl building

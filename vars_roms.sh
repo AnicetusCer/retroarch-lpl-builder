@@ -30,6 +30,7 @@ NECPCEngine=$RomsDir/NEC-PCEngine
 # NEC - PC-98 series
 # NEC - PC-FX series
 # Nintendo - 3DS
+Nintendo3DS=$RomsDir/Nintendo-3DS
 # Nintendo - DS
 NintendoDS=$RomsDir/Nintendo-DS
 # Nintendo - Game Boy
@@ -47,6 +48,7 @@ NintendoN64=$RomsDir/Nintendo-N64
 # Nintendo - SNES / SFC
 NintendoSNES=$RomsDir/Nintendo-SuperNintendoEntertainmentSystem
 # Nintendo - Virtual Boy
+NintendoVB=$RomsDir/Nintendo-VirtualBoy
 # Philips - CDi
 # Sega - Dreamcast / NAOMI
 SegaDreamcast=$RomsDir/Sega-Dreamcast

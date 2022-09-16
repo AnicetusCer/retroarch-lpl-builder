@@ -7,14 +7,14 @@ source "${ScriptDir}/vars_cores"
 source "${ScriptDir}/vars_roms"
 source "${ScriptDir}/vars_playlists"
 source "${ScriptDir}/functions"
-RetroMachine="Sega - Saturn"
-TargetCore="${core_mednafen_saturn}"
-TargetCoreName="${core_mednafen_saturn_name}"
-TargetRomDir="${SegaSaturn}"
+RetroMachine="Sony - PlayStation Portable"
+TargetCore="${core_ppsspp}"
+TargetCoreName="${core_ppsspp_name}"
+TargetRomDir="${SonyPSP}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
 lpl_build_header > "${TargetLplFile}"
-generate_segasaturn_image_list_from ${TargetRomDir}
+generate_sonypsp_image_list_from ${TargetRomDir}
 FCount="$(wc -l $TempRomsList | awk '{print $1}')"
 NCount=1
 printf "Total Entries: $FCount\n"
@@ -25,10 +25,10 @@ do
   LabelName=$(sed "s|${FileExt}$||" <<< "${ImageFileName}") 
   if [ $NCount -lt $FCount ]
   then
-    lpl_build_entry_generic "${ImageFilePath}" >> "${TargetLplFile}"
+    lpl_build_entry_generic_t "${ImageFilePath}" >> "${TargetLplFile}"
     let NCount++
   else
-    lpl_build_last_entry_generic "${ImageFilePath}"  >> "${TargetLplFile}"
+    lpl_build_last_entry_generic_t "${ImageFilePath}"  >> "${TargetLplFile}"
     let NCount++
   fi
   printf "\rGenerating Entry: $((${NCount}-1))"

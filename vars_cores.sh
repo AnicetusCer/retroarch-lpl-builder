@@ -15,7 +15,7 @@ core_a5200=${CoresDir}/a5200_libretro.so
 core_prosystem_name="Atari - 7800 (ProSystem)"
 core_prosystem=${CoresDir}/prosystem_libretro.so
 # Atari - Jaguar
-core_virtualjaguar_name=
+core_virtualjaguar_name="Atari - Jaguar (Virtual Jaguar)"
 core_virtualjaguar=${CoresDir}/virtualjaguar_libretro.so"Atari - Jaguar (Virtual Jaguar)"
 # Atari - Lynx
 core_mednafen_lynx_name="Atari - Lynx (Beetle Lynx)"
