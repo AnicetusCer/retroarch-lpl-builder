@@ -27,7 +27,7 @@ It does not matter what you call the rom directories or where you put them on th
 
 ## General script workflow
 
-The first thing to do is setup your variable files, once the variable files are setup which is basically setting a bunch of file locations. You can then run one of 
+The first thing to do is setup your variable files, once the variable files are setup which is basically setting a bunch of file locations. You can then run one of  
 the "lpl-build-{system}" scripts.  
 The scripts all start with the prefix "lpl-build" followed by an idication of which retromachine they will generate a playlist for.
 Eg.  
