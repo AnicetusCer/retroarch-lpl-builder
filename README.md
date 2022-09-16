@@ -10,7 +10,7 @@ Eg.
 
 ```bash
 cd ./retroarch-lpl-builder
-chmod 755 lpl-build-*
+chmod 755 functions.sh lpl-build-* vars_* list-installed-*
 ```
 
 ## Intro
