@@ -7,14 +7,14 @@ source "${ScriptDir}/vars_cores"
 source "${ScriptDir}/vars_roms"
 source "${ScriptDir}/vars_playlists"
 source "${ScriptDir}/functions"
-RetroMachine="Sega - Saturn"
-TargetCore="${core_mednafen_saturn}"
-TargetCoreName="${core_mednafen_saturn_name}"
-TargetRomDir="${SegaSaturn}"
+RetroMachine="Sega - SG-1000"
+TargetCore="${core_gearsystem}"
+TargetCoreName="${core_gearsystem_name}"
+TargetRomDir="${SegaSG1000}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
 lpl_build_header > "${TargetLplFile}"
-generate_segasaturn_image_list_from ${TargetRomDir}
+generate_segasg1000_image_list_from ${TargetRomDir}
 FCount="$(wc -l $TempRomsList | awk '{print $1}')"
 NCount=1
 printf "Total Entries: $FCount\n"
@@ -22,7 +22,7 @@ while read -r ImageFilePath
 do
   ImageFileName=$(awk -F/ '{print $NF}' <<< $ImageFilePath)
   FileExt=$(awk -F. '{print "."$NF}' <<< "${ImageFileName}")
-  LabelName=$(sed "s|${FileExt}$||" <<< "${ImageFileName}") 
+  LabelName=$(sed "s|${FileExt}$||" <<< "${ImageFileName}")
   if [ $NCount -lt $FCount ]
   then
     lpl_build_entry_generic "${ImageFilePath}" >> "${TargetLplFile}"
