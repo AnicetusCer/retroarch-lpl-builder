@@ -4,7 +4,7 @@ A utility to generate retroarch lpl playlists based on the rom files found in a 
 
 Warning: This lpl build tool will simply overwrite any existing .lpl files for any targeted system, you may want to backup any existing .lpl playlists you currently have. you have been warned at the top of the readme.  
 
-Warning: I noticed when cloning the files from github that the execution but if the scripts is often replaced, meaning the scripts won't just run. If this happens then you just need to make the lpl-build scripts executable. You can do this by going into the retroarch-lpl-builder directory and running \`chmod 755 lpl-build-*\`  
+Warning: I noticed when cloning the files from github that the execution bit of the scripts is often replaced, meaning the scripts won't just run. If this happens then you just need to make the lpl-build scripts executable. You can do this by going into the retroarch-lpl-builder directory and running \`chmod 755 lpl-build-*\`  
 
 Eg.  
 
