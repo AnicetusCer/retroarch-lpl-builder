@@ -7,14 +7,14 @@ Warning: This lpl build tool will simpily overwrite any existing .lpl files for 
 ## Intro
 
 Hello All  
-I got a little bit peaved off with the retroarch need to build lpl's from database references of known good images. The goal is laudible but world is very imperfect and people often have there own bad or simpily unreferenced copies of their games. So I wrote this simple utility to help build lpl lists for retroarch based only on the file names in a given retromachine rom directory.  
+I got a little bit peaved off with the retroarch need to build lpl's from database references of known good images. The goal is laudible but world is very imperfect and people often have their own bad or simpily unreferenced copies of their games. So I wrote this simple utility to help build lpl lists for retroarch based only on the file names in a given retromachine rom directory.  
   
 I'm not the greatest scripter in the world there are probably a hundred efficencies and improvments that could be made, but for now this achives my goals of using only bash and associated commands.
 This will work on linux and should work on windows using windows subsytems for linux or a linux runtime emulator, like mobaXterm, Cygwin, MingGw-w64.
   
 ## Expectations
 
-Most people organise there roms into system dedicated directories, these scripts expect that you do the same.
+Most people organise their roms into system dedicated directories, these scripts expect that you do the same.
 For example:  
 ./megadrive  
   game1.md  
@@ -92,12 +92,12 @@ Now we have finished the task of setting our variables, we just need to select a
 example script run:
   
 ```bash
-  
-./lpl-build-atari-2600  
-Total Entries: 3  
-Generating Entry: 3  
-Done  
-  
+
+./lpl-build-atari-2600
+Total Entries: 3
+Generating Entry: 3
+Done
+
 ```  
   
 ## Advanced users
@@ -108,58 +108,58 @@ Chillax, most of the functionality of these scripts is nearly identical, to add 
 
 - copy an existing script.  
   
-```bash  
-  
-cp lpl-build-atari-2600 lpl-build-gb  
-  
+```bash
+
+cp lpl-build-atari-2600 lpl-build-gb
+
 ```  
-  
+
 - Edit the copied files variables:  
-  
+
 Here you can see I swap out the orginal atari 2600 variables and replace them with Nintendo GB variable entries i have in the var_cores and var_roms files.  
   
 Original variables lines:  
-  
+
 ```bash
-  
-RetroMachine="Atari - 2600"  
-TargetCore="${core_stella2014}"  
-TargetCoreName="${core_stella2014_name}"  
-TargetRomDir="${Atari2600}"  
+
+RetroMachine="Atari - 2600"
+TargetCore="${core_stella2014}"
+TargetCoreName="${core_stella2014_name}"
+TargetRomDir="${Atari2600}"
 
 ```
-  
+
 New variables lines:  
-  
+
 ```bash
 
-RetroMachine="Nintendo - Game Boy"  
-TargetCore="${core_sameboy}"  
-TargetCoreName="${core_sameboy_name}"  
-TargetRomDir="${NintendoGB}"  
-  
+RetroMachine="Nintendo - Game Boy"
+TargetCore="${core_sameboy}"
+TargetCoreName="${core_sameboy_name}"
+TargetRomDir="${NintendoGB}"
+
 ```
-  
+
 Now all that needs to be done is to write a new function to help us look up the correct file extentions from for the gb core we'll use, in this case i'm using sameboy which allows the extentions types .gb , .gbc and .zip extenstions. Feel free to add any other extention types you wish to use.
 There are plenty of other examples in the functions file, just copy one of the existing retromachine find stanzas, rename the function and modify the extention lookups in the find command.  
 
 ```bash
 
-generate_nintendogb_image_list_from()  
-{  
-TargetDir="$1"  
-find "${TargetDir}" -type f \( -iname "*.gb" -o -iname "*.gbc" -o -iname "*.zip" \) -print > $TempRomsList  
-}  
-  
+generate_nintendogb_image_list_from()
+{
+TargetDir="$1"
+find "${TargetDir}" -type f \( -iname "*.gb" -o -iname "*.gbc" -o -iname "*.zip" \) -print > $TempRomsList
+}
+
 ```
-  
+
 Now we have a new find function called "generate_nintendogb_image_list_from" for the gameboy roms, we now replace the existing function call in the script.  
-  
+
 Original function line:  
-  
+
 ```bash
 
-generate_atari2600_image_list_from ${TargetRomDir}  
+generate_atari2600_image_list_from ${TargetRomDir}
 
 ```
 
@@ -167,7 +167,7 @@ New function line:
 
 ```bash
 
-generate_nintendogb_image_list_from ${TargetRomDir}  
+generate_nintendogb_image_list_from ${TargetRomDir}
 
 ```
 
