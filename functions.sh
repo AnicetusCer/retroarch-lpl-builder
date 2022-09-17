@@ -251,7 +251,7 @@ printf '  ]
 
 check_if_rom_dir_exists()
 {
-CheckDir=$1
+CheckDir="$1"
   if [ ! -d "$CheckDir" ]
   then
    printf "Notice: "${CheckDir}" not found, no playlist created for this retromachine.\n"
