@@ -13,6 +13,7 @@ TargetCoreName="${core_opera_name}"
 TargetRomDir="${ThreeDOC3DO}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+check_if_rom_dir_exits
 lpl_build_header > "${TargetLplFile}"
 generate_3doco3do_image_list_from "${TargetRomDir}"
 FCount="$(wc -l $TempRomsList | awk '{print $1}')"

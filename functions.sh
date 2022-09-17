@@ -249,6 +249,16 @@ printf '  ]
 '
 }
 
+check_if_rom_dir_exits()
+{
+CheckDir=$1
+  if [ ! -d "$CheckDir" ]
+  then
+   printf="Notice: "${CheckDir}" not found"
+   exit
+  fi
+}
+
 make_rom_label_by_removing_file_ext()
 {
 # This is now defunct leave here for notes
