@@ -101,7 +101,7 @@ find "${TargetDir}" -type f \( -iname "*.nes" -o -iname "*.fds" -o -iname "*.unf
 generate_nintendon64_image_list_from()
 {
 TargetDir="$1"
-find "${TargetDir}" -type f \( -iname "*.n64" -o -iname "*.v64" -o -iname "*.z64" -o -iname "*.bin" -o -iname "*.u1" \) -print > $TempRomsList
+find "${TargetDir}" -type f \( -iname "*.n64" -o -iname "*.v64" -o -iname "*.z64" -o -iname "*.bin" -o -iname "*.u1" -o -iname "*.zip"\) -print > $TempRomsList
 }
 
 generate_nintendovb_image_list_from()
