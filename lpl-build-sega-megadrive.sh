@@ -13,6 +13,7 @@ TargetCoreName="${core_blastem_name}"
 TargetRomDir="${SegaMD}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+echo "$RetroMachine"
 check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_segamegadrive_image_list_from "${TargetRomDir}"

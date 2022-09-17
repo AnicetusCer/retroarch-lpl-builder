@@ -13,6 +13,7 @@ TargetCoreName="${core_pcsx2_name}"
 TargetRomDir="${SonyPSX2}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+echo "$RetroMachine"
 check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_sonyplaystation2_image_list_from "${TargetRomDir}"

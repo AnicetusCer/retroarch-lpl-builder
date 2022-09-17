@@ -13,6 +13,7 @@ TargetCoreName="${core_opera_name}"
 TargetRomDir="${ThreeDOC3DO}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+echo "$RetroMachine"
 check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_3doco3do_image_list_from "${TargetRomDir}"

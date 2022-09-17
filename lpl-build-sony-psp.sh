@@ -13,6 +13,7 @@ TargetCoreName="${core_ppsspp_name}"
 TargetRomDir="${SonyPSP}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+echo "$RetroMachine"
 check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_sonypsp_image_list_from "${TargetRomDir}"

@@ -255,6 +255,7 @@ CheckDir="$1"
   if [ ! -d "$CheckDir" ]
   then
    echo "Notice: "${CheckDir}" not found, no playlist created for this retromachine.\n"
+   echo "done"
    exit
   fi
 }

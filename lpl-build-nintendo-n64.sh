@@ -13,6 +13,7 @@ TargetCoreName="${core_mupen64plus_next_name}"
 TargetRomDir="${NintendoN64}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+echo "$RetroMachine"
 check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_nintendon64_image_list_from "${TargetRomDir}"

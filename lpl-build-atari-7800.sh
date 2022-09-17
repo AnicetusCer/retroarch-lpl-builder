@@ -13,6 +13,7 @@ TargetCoreName="${core_prosystem_name}"
 TargetRomDir="${Atari7800}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+echo "$RetroMachine"
 check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_atari7800_image_list_from "${TargetRomDir}"

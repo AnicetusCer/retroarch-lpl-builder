@@ -13,6 +13,7 @@ TargetCoreName="${core_smsplus_name}"
 TargetRomDir="${SegaMS}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+echo "$RetroMachine"
 check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_segasms_image_list_from "${TargetRomDir}"

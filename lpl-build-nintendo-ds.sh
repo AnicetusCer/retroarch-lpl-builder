@@ -13,6 +13,7 @@ TargetCoreName="${core_melonds_name}"
 TargetRomDir="${NintendoDS}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+echo "$RetroMachine"
 check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_nintendods_image_list_from "${TargetRomDir}"

@@ -13,6 +13,7 @@ TargetCoreName="${core_citra_name}"
 TargetRomDir="${Nintendo3DS}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+echo "$RetroMachine"
 check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_nintendo3ds_image_list_from "${TargetRomDir}"
