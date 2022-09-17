@@ -59,7 +59,7 @@ Sega32X=$RomsDir/Sega-32X
 # Sega - CD
 SegaCD=$RomsDir/Sega-Sega-CD
 # Sega - Master System
-SegaMS="$RomsDir/'Sega-MasterSystem-Mark III'"
+SegaMS=$RomsDir/'Sega-MasterSystem-Mark III'
 # Sega - Game Gear
 SegaGG=$RomsDir/Sega-GameGear
 # Sega - SG-1000
