@@ -13,6 +13,7 @@ TargetCoreName="${core_smsplus_name}"
 TargetRomDir="${SegaMS}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_segasms_image_list_from "${TargetRomDir}"
 FCount="$(wc -l $TempRomsList | awk '{print $1}')"

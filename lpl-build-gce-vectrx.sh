@@ -13,6 +13,7 @@ TargetCoreName="${core_vecx_name}"
 TargetRomDir="${Vectrex}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_vectrx_image_list_from "${TargetRomDir}"
 FCount="$(wc -l $TempRomsList | awk '{print $1}')"

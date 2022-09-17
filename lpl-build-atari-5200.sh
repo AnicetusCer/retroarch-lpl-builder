@@ -13,6 +13,7 @@ TargetCoreName="${core_a5200_name}"
 TargetRomDir="${Atari5200}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
+check_if_rom_dir_exists "${TargetRomDir}"
 lpl_build_header > "${TargetLplFile}"
 generate_atari5200_image_list_from "${TargetRomDir}"
 FCount="$(wc -l $TempRomsList | awk '{print $1}')"
