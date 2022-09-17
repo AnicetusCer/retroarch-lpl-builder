@@ -65,7 +65,7 @@ find "${TargetDir}" -type f \( -iname "*.3ds" -o -iname "*.3dsx"  -o -iname "*.3
 generate_nintendods_image_list_from()
 {
 TargetDir="$1"
-find "${TargetDir}" -type f \( -iname "*.nds" -o -iname "*.dsi"-iname "*.zip" -o -iname "*.7z" \) -print > $TempRomsList
+find "${TargetDir}" -type f \( -iname "*.nds" -o -iname "*.dsi" -o -iname "*.zip" -o -iname "*.7z" \) -print > $TempRomsList
 }
 
 generate_nintendogb_image_list_from()
