@@ -249,12 +249,12 @@ printf '  ]
 '
 }
 
-check_if_rom_dir_exits()
+check_if_rom_dir_exists()
 {
 CheckDir=$1
   if [ ! -d "$CheckDir" ]
   then
-   printf="Notice: "${CheckDir}" not found"
+   printf "Notice: "${CheckDir}" not found"
    exit
   fi
 }
