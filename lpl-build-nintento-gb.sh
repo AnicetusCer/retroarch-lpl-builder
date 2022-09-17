@@ -14,7 +14,7 @@ TargetRomDir="${NintendoGB}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
 lpl_build_header > "${TargetLplFile}"
-generate_nintendogb_image_list_from ${TargetRomDir}
+generate_nintendogb_image_list_from "${TargetRomDir}"
 FCount="$(wc -l $TempRomsList | awk '{print $1}')"
 NCount=1
 printf "Total Entries: $FCount\n"

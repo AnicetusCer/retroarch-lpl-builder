@@ -2,7 +2,7 @@
 RomsDir=/home/deck/roms
 
 # Below you need to set where your roms are kept, one location per console
-# Nb. If you have spaces in your console directory name quote the entry using quotes quotes. Eg. SegaMS="$RomsDir/'Sega-MasterSystem-Mark III'" not "SegaMS=$RomsDir/Sega-MasterSystem-Mark III".
+# Nb. If you have spaces in your console directory name quote the entry using quotes quotes. Eg. SegaMS=$RomsDir/'Sega-MasterSystem-Mark III' not SegaMS=$RomsDir/Sega-MasterSystem-Mark III.
 # Nb2. If expanding this script or changing the name of a variable don't use hyphens in the variable name itself Eg. "Atari2600=$RomsDir/some/dir" not "Atari-2600=$RomsDir/some/dir" bash does not like this.
 #
 # Atari - 2600

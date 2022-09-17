@@ -14,7 +14,7 @@ TargetRomDir="${Atari7800}"
 TargetLplFile="${PlaylistsDir}/${RetroMachine}.lpl"
 
 lpl_build_header > "${TargetLplFile}"
-generate_atari7800_image_list_from ${TargetRomDir}
+generate_atari7800_image_list_from "${TargetRomDir}"
 FCount="$(wc -l $TempRomsList | awk '{print $1}')"
 NCount=1
 printf "Total Entries: $FCount\n"
