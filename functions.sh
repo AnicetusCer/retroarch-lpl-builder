@@ -119,7 +119,8 @@ find "${TargetDir}" -type f \( -iname "*.smc" -o -iname "*.sfc" -o -iname "*.swc
 generate_segadreamcast_image_list_from()
 {
 TargetDir="$1"
-find "${TargetDir}" -type f \( -iname "*.chd" -o -iname "*.cdi" -o -iname "*.bin" -o -iname "*.cue" -o -iname "*.gdi" -o -iname "*.lst" -o -iname "*.dat" -o -iname "*.m3u" -o -iname "*.zip" -o -iname "*.7z" \) -print > $TempRomsList
+#find "${TargetDir}" -type f \( -iname "*.chd" -o -iname "*.cdi" -o -iname "*.bin" -o -iname "*.cue" -o -iname "*.gdi" -o -iname "*.lst" -o -iname "*.dat" -o -iname "*.m3u" -o -iname "*.zip" -o -iname "*.7z" \) -print > $TempRomsList
+find "${TargetDir}" -type f \( -iname "*.gdi" \) -print > $TempRomsList
 }
 
 generate_segamegadrive_image_list_from()
@@ -137,7 +138,8 @@ find "${TargetDir}" -type f \( -iname "*.bin" -o -iname "*.gen" -o -iname "*.gg"
 generate_segacd_image_list_from()
 {
 TargetDir="$1"
-find "${TargetDir}" -type f \( -iname "*.bin" -o -iname "*.gen" -o -iname "*.gg" -o -iname "*.smd" -o -iname "*.pco" -o -iname "*.md" -o -iname "*.32x" -o -iname "*.chd" -o -iname "*.cue" -o -iname "*.iso" -o -iname "*.sms" -o -iname "*.68k" -o -iname "*.sgd" -o -iname "*.m3u" -o -iname "*.zip" \) -print > $TempRomsList
+#find "${TargetDir}" -type f \( -iname "*.bin" -o -iname "*.gen" -o -iname "*.gg" -o -iname "*.smd" -o -iname "*.pco" -o -iname "*.md" -o -iname "*.32x" -o -iname "*.chd" -o -iname "*.cue" -o -iname "*.iso" -o -iname "*.sms" -o -iname "*.68k" -o -iname "*.sgd" -o -iname "*.m3u" -o -iname "*.zip" \) -print > $TempRomsList
+find "${TargetDir}" -type f \( -iname "*.cue" \) -print > $TempRomsList
 }
 
 generate_segasms_image_list_from()
@@ -161,7 +163,8 @@ find "${TargetDir}" -type f \( -iname "*.sms" -o -iname "*.gg" -o -iname "*.sg" 
 generate_segasaturn_image_list_from()
 {
 TargetDir="$1"
-find "${TargetDir}" -type f \( -iname "*.cue" -o -iname "*.toc" -o -iname "*.m3u" -o -iname "*.ccd" -o -iname "*.chd" \) -print > $TempRomsList
+#find "${TargetDir}" -type f \( -iname "*.cue" -o -iname "*.toc" -o -iname "*.m3u" -o -iname "*.ccd" -o -iname "*.chd" \) -print > $TempRomsList
+find "${TargetDir}" -type f \( -iname "*.cue" \) -print > $TempRomsList
 }
 
 generate_snkngp_image_list_from()
@@ -179,7 +182,8 @@ find "${TargetDir}" -type f \( -iname "*.ngp" -o -iname "*.ngc" -o -iname "*.ngp
 generate_sonyplaystation_image_list_from()
 {
 TargetDir="$1"
-find "${TargetDir}" -type f \( -iname "*.exe" -o -iname "*.psexe" -o -iname "*.cue" -o -iname "*.bin" -o -iname "*.img" -o -iname "*.iso" -o -iname "*.chd" -o -iname "*.pbp" -o -iname "*.ecm" -o -iname "*.mds" -o -iname "*.psf" -o -iname "*.m3u" \) -print > $TempRomsList
+#find "${TargetDir}" -type f \( -iname "*.exe" -o -iname "*.psexe" -o -iname "*.cue" -o -iname "*.bin" -o -iname "*.img" -o -iname "*.iso" -o -iname "*.chd" -o -iname "*.pbp" -o -iname "*.ecm" -o -iname "*.mds" -o -iname "*.psf" -o -iname "*.m3u" \) -print > $TempRomsList
+find "${TargetDir}" -type f \( -iname "*.cue" \) -print > $TempRomsList
 }
 
 generate_sonyplaystation2_image_list_from()
